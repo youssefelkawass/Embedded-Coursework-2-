@@ -79,7 +79,7 @@ The system allows setting upper (LH) and lower (LL) temperature limits and light
 │── Project Design.md
 │── CW2 Program Video .mp4
 
-'''plantuml 
+```plantuml 
 @startuml
 package "CW2 Include Structure" {
 
@@ -108,7 +108,7 @@ package "CW2 Include Structure" {
     Main.ino ..> Btn_Interface : reads input
 }
 @enduml
-'''
+```
 
 ---
 
