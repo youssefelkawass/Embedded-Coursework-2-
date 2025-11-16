@@ -79,37 +79,6 @@ The system allows setting upper (LH) and lower (LL) temperature limits and light
 │── Project Design.md
 │── CW2 Program Video .mp4
 
-```plantuml 
-@startuml
-package "CW2 Include Structure" {
-
-    [Main.ino] .> [ADC.h] : includes
-    [Main.ino] .> [LCD.h] : includes
-    [Main.ino] .> [Buttons.h] : includes
-
-    [ADC.ino] .> [ADC.h] : includes
-    [LCD.ino] .> [LCD.h] : includes
-    [Buttons.ino] .> [Buttons.h] : includes
-
-    ' Optional internal interfaces (representing logical use)
-    interface ADC_Interface
-    interface LCD_Interface
-    interface Btn_Interface
-
-    note left of Main.ino
-      Main module controls:
-      - ADC reading
-      - LCD update
-      - Button handling
-    end note
-
-    Main.ino ..> ADC_Interface : uses ADC values
-    Main.ino ..> LCD_Interface : sends display data
-    Main.ino ..> Btn_Interface : reads input
-}
-@enduml
-```
-
 ---
 
 ## 8. Author
